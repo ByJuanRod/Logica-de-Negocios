@@ -1,0 +1,40 @@
+@startuml
+
+start
+:El cliente contacta al negocio (Fisicamente / Digital);
+:Se le muestra el catalogo de productos al cliente.;
+:El cliente selecciona el/los productos que desea comprar.;
+:Se hace una cotización.;
+
+if( ¿El cliente esta de acuerdo con la cotización? ) then (Si)
+    :Se registran los datos del cliente.;
+    :Se le solicta al cliente un 50% de abono.;
+    :Se abre una cuenta por cobrar.;
+    if( ¿El cliente pagó el 50%? ) then (Si)
+        :Se inicia el proceso de producción.;
+        if( ¿El cliente desea cancelar el pedido?) then (Si)
+           :Se le ofrece un 50% del abono realizado al cliente.;
+        else (No)
+        endif
+
+        while( ¿El pedido esta listo? ) is (No)
+            :Se espera a que el producto este listo.;
+        endwhile (Si)
+
+        :Se le notifica al cliente que el pedido ya esta listo.;
+         if( ¿El cliente abonó el 50% restante? ) then (Si)
+             :Se le realiza la entrega del pedido al cliente.;
+             :Se cierra la cuenta por cobrar.;
+         else (No)
+         endif
+
+    else (No)
+    endif
+        :No se realiza la entrega del pedido.;
+else (No)
+        :No se realiza el pedido.;
+endif
+
+stop
+
+@enduml

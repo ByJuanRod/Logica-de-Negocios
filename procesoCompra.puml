@@ -1,15 +1,28 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+start
+:El cliente pide un/varios producto/s fisicamente.;
+if ( ¿Esta disponible? ) then (Si)
+    :El cliente procede a la parte de caja.;
+    :Se registran fisicamente los datos del cliente.;
 
-== Initialization ==
+    if( ¿El cliente aplica para descuento? ) then (Si)
+        :Se le ofrece un descuento de un monto o porcentaje.;
+    else (No)
+        :El precio de la compra permanece igual.;
+    endif
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+    if( ¿El cliente puede pagar la compra? ) then (Si)
+        :Se realiza el pago.;
+        :Se entrega una factura fisica al cliente con los datos.;
+    else (No)
+        :No se procesa la compra.;
+    endif
 
-== Repetition ==
+else (No)
+    :Se le da la opción al cliente de realizar un pedido.;
+    :No se procesa la compra;
+endif
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+stop
 @enduml
