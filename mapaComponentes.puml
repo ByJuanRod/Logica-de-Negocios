@@ -1,0 +1,40 @@
+@startmindmap
+
+
+*Operaciones
+**[#lightgreen] Clientes
+*** Realizar Pedidos
+*** Comprar Productos (Preelaborados)
+*** Saldar CXC (Cuentas por Cobrar)
+
+**[#lightgreen]Empleados
+*** Visualizar Nomina
+**** ISR (Impuesto Sobre la Renta)
+**** INFOTEP (1% de la nomina)
+**** ARS (Fondo de Salud)
+***** 3.04% del Empleado
+***** 7.09% del Empleador
+**** AFP (Fondo de Pensión)
+***** 2.87% del Empleado
+***** 7.10% del Empleador
+**** Riesgo Laboral (1.10%)
+
+**[#lightgreen]Servicios
+***Facturar
+****Procesar Descuentos
+*** Mantenimientos
+*** Devoluciones
+
+**[#lightgreen]Inventario
+*** Gestión de Materia Prima
+*** Control de Proveedores
+****[#lightblue]CXP (Cuentas por Pagar)
+*** Gestión de Mermas (Sobrantes)
+*** Pedidos Listos
+
+
+**[#lightgreen]Operatividad
+***Alertas al cliente
+***Gestión de Procesos
+***Catálogo de Productos
+@endmindmap
