@@ -2,36 +2,26 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:ClickServlet.handleRequest();
-:new page;
-if (Page.onSecurityCheck) then (true)
-  :Page.onInit();
-  if (isForward?) then (no)
-    :Process controls;
-    if (continue processing?) then (no)
-      stop
-    endif
+:La empresa recibe un encargo;
+if (¿Hay materia prima?) then (Si)
 
-    if (isPost?) then (yes)
-      :Page.onPost();
-    else (no)
-      :Page.onGet();
-    endif
-    :Page.onRender();
-  endif
-else (false)
+else(No)
+    :Solicita un pedido de materiales a los proveedores.;
+    :Verifican el pedido.;
+
 endif
 
-if (do redirect?) then (yes)
-  :redirect process;
-else
-  if (do forward?) then (yes)
-    :Forward request;
-  else (no)
-    :Render page template;
-  endif
+    :Le da un estimado al cliente de cuanto tiempo tardará el trabajo.;
+    :Proceden a cortar el acero para armar los equipos.;
+    :Los técnicos ensamblan las partes mediante soldadura.;
+    :Se registra el porcentaje de producción para dar un estimado al cliente.;
+if(¿Hay retraso?) then(Si)
+    :Procede a negociar con el cliente.;
+else(No)
 endif
-
+if(¿El equipo está terminado?) then(Si)
+    :Entrega el equipo al cliente.;
+endif
 stop
 
 @enduml
