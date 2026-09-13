@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object Clientes
+
+object Empleados
+
+object PosicionesLaborales
+
+object Pedidos
+
+object ARS
+
+object AFP
+
+object CXC
+
+object Solicitudes
+
+object Facturas
+
+object Proveedores
+
+object Procesos
+
+object CXP
+
+object Pagos
+
+object Compras
+
+object MateriaPrima
+
+
+@enduml

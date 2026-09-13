@@ -27,7 +27,10 @@ if( ¿El cliente esta de acuerdo con la cotización? ) then (Si)
         :Se inicia el proceso de producción.;
         if( ¿El cliente desea cancelar el pedido?) then (Si)
            :Se le ofrece un 50% del abono realizado al cliente.;
+           :No se realiza la entrega.;
+           stop
         else (No)
+
         endif
 
         while( ¿El pedido esta listo? ) is (No)
@@ -39,11 +42,12 @@ if( ¿El cliente esta de acuerdo con la cotización? ) then (Si)
              :Se le realiza la entrega del pedido al cliente.;
              :Se cierra la cuenta por cobrar.;
          else (No)
+              :No se entrega el pedido.;
          endif
 
     else (No)
+        :No se realiza el pedido.;
     endif
-        :No se realiza la entrega del pedido.;
 else (No)
         :No se realiza el pedido.;
 endif
