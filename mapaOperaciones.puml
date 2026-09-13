@@ -20,7 +20,7 @@
         *Historial de Pagos de Nómina
 
         *Costos Operativos
-            *Cuentas con Proveedores (CXP)
+            *[#lightgray]Cuentas con Proveedores (CXP)
             *Cuentas con Clientes (CXC)
 
     *[#lightgreen]Servicios
@@ -33,6 +33,7 @@
             *Requerimientos de Fabricación
             *Revisión de Disponibilidad
         *Venta Directa (Productos Preelaborados)
+        *Cancelación de Pedidos
         *Realizar Pedidos
             *Informe de Requerimientos
 
@@ -54,8 +55,5 @@
             *Proceso de Entrega
                 *Alerta al Cliente
         *Control de Mermas (Restantes)
-
-
-
 
 @endmindmap

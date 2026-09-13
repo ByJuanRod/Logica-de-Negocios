@@ -2,25 +2,31 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:La empresa recibe un encargo;
-if (¿Hay materia prima?) then (Si)
+:La empresa recibe un encargo.;
+if ( ¿Hay materia prima? ) then (Si)
 
 else(No)
     :Solicita un pedido de materiales a los proveedores.;
     :Verifican el pedido.;
 
 endif
-
     :Le da un estimado al cliente de cuanto tiempo tardará el trabajo.;
     :Proceden a cortar el acero para armar los equipos.;
     :Los técnicos ensamblan las partes mediante soldadura.;
-    :Se registra el porcentaje de producción para dar un estimado al cliente.;
+    :Se realiza  el proceso de acoplamiento.;
+    :Se realiza el proceso de aseguramiento.;
+
+    while( ¿Paso el aseguramiento? ) is (No)
+        :Se verifica la calidad de los materiales.;
+        :Se hacen las reparaciones correspondientes.;
+    endwhile (Si)
+
 if(¿Hay retraso?) then(Si)
     :Procede a negociar con el cliente.;
 else(No)
 endif
 if(¿El equipo está terminado?) then(Si)
-    :Entrega el equipo al cliente.;
+    :Se le notifica al cliente.;
 endif
 stop
 

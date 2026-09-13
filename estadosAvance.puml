@@ -1,0 +1,89 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+
+
+state Recepción{
+
+}
+
+Recepción :<i> - Requerimientos del pedido</i>
+
+[*] --> Recepción
+
+state Levantamiento{
+
+}
+
+Levantamiento: <i> - Tomar medidas para el pedido</i>
+
+Recepción -up-> Levantamiento
+
+state Cotización{
+
+}
+
+Cotización: <i> - Analizar el costo total del pedido</i>
+
+Levantamiento --> Cotización
+Cotización --> Cancelación
+
+state Aprobación{
+
+}
+
+Aprobación : <i> - Confirmación del pedido (Abono y Revisión)</i>
+
+Cotización --> Aprobación
+
+Aprobación --> Cancelación
+
+state Cancelación{
+
+}
+
+Cancelación : <i> - Rechazar el producto</i>
+
+Cancelación --> [*]
+
+state Verificación{
+
+}
+
+Verificación : <i> - Revisión en el inventario de la materia prima.</i>
+
+Aprobación --> Verificación
+
+state Fabricación{
+
+}
+
+Fabricación : <i> - Corte, ensamble y acoplamiento del producto</i>
+
+Verificación --> Fabricación
+
+state Solicitud{
+
+}
+
+Solicitud : <i> - Solicitar la materia prima al proveedor si hace falta.</i>
+
+Verificación --> Solicitud
+Solicitud --> Fabricación
+
+state Aseguramiento{
+
+}
+
+Aseguramiento : <i> - Revisión de la calidad del producto </i>
+Fabricación -up-> Aseguramiento
+Aseguramiento --> Entrega
+
+state Entrega{
+
+}
+
+Entrega : <i>Recepción del 50% restante y entrega.</i>
+
+Entrega --> [*]
+@enduml
