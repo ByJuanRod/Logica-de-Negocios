@@ -19,18 +19,24 @@ Levantamiento: <i> - Tomar medidas para el pedido</i>
 
 Recepción -up-> Levantamiento
 
-state Cotización{
+state Cotización #lightblue{
 
 }
+note right of Cotización
+    10% de avance del trabajo
+end note
 
 Cotización: <i> - Analizar el costo total del pedido</i>
 
 Levantamiento --> Cotización
 Cotización --> Cancelación
 
-state Aprobación{
+state Aprobación #lightblue{
 
 }
+note right of Aprobación
+ 20% de avance del trabajo
+end note
 
 Aprobación : <i> - Confirmación del pedido (Abono y Revisión)</i>
 
@@ -38,7 +44,7 @@ Cotización --> Aprobación
 
 Aprobación --> Cancelación
 
-state Cancelación{
+state Cancelación #orange{
 
 }
 
@@ -54,9 +60,13 @@ Verificación : <i> - Revisión en el inventario de la materia prima.</i>
 
 Aprobación --> Verificación
 
-state Fabricación{
+state Fabricación #lightblue{
 
 }
+note right of Fabricación
+    60% de avance del trabajo
+end note
+
 
 Fabricación : <i> - Corte, ensamble y acoplamiento del producto</i>
 
@@ -71,17 +81,23 @@ Solicitud : <i> - Solicitar la materia prima al proveedor si hace falta.</i>
 Verificación --> Solicitud
 Solicitud --> Fabricación
 
-state Aseguramiento{
+state Aseguramiento #lightblue{
 
 }
+note right of Aseguramiento
+    90% de avance del trabajo
+end note
 
 Aseguramiento : <i> - Revisión de la calidad del producto </i>
 Fabricación -up-> Aseguramiento
 Aseguramiento --> Entrega
 
-state Entrega{
+state Entrega #lightblue{
 
 }
+note right of Entrega
+    100% de avance del trabajo
+end note
 
 Entrega : <i>Recepción del 50% restante y entrega.</i>
 
