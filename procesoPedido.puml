@@ -4,6 +4,19 @@ start
 :El cliente contacta al negocio (Fisicamente / Digital);
 :Se le muestra el catalogo de productos al cliente.;
 :El cliente selecciona el/los productos que desea comprar.;
+
+if( ¿Se necesita un levantamiento previo? ) then (Si)
+    :Se envia un equipo a realizar las mediciones.;
+    :Se registran los requerimientos.;
+else (No)
+endif
+
+if( ¿El cliente amerita un descuento? ) then (Si)
+    :Se le aplica el descuento al cliente.;
+else (No)
+    :El precio se mantiene igual.;
+endif
+
 :Se hace una cotización.;
 
 if( ¿El cliente esta de acuerdo con la cotización? ) then (Si)

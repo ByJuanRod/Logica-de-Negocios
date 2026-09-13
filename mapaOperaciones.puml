@@ -1,0 +1,59 @@
+@startmindmap
+
+*[#lightblue]Operaciones
+    *[#lightgreen]Recursos Humanos
+        *Control de Contrataciones
+            *Empleados Fijos
+            *Empleados por Trabajo
+        *Control de Nóminas
+            *ISR
+            *ARS (Seguro de Salud)
+                *Empleador (7.09%)
+                *Empleado (3.04%)
+            *INFOTEP (1% de la Nomina General)
+            *Riesgo Laboral (1.10%)
+            *AFP (Fondos de Pensión)
+                *Empleador (7.10%)
+                *Empleado (2.87%)
+
+    *[#lightgreen]Finanzas
+        *Historial de Pagos de Nómina
+
+        *Costos Operativos
+            *Cuentas con Proveedores (CXP)
+            *Cuentas con Clientes (CXC)
+
+    *[#lightgreen]Servicios
+        *Facturación
+            *Procesar descuentos (Escenario Especial)
+        *Realizar Cotizaciones
+            *Cálculo de costos (Utilizados + mano de obra + ganancia)
+        *Catálogo de Productos
+        *Levantamiento Técnico
+            *Requerimientos de Fabricación
+            *Revisión de Disponibilidad
+        *Venta Directa (Productos Preelaborados)
+        *Realizar Pedidos
+            *Informe de Requerimientos
+
+
+    *[#lightgreen]Inventario
+        *Materia Prima
+            *Control de Disponibilidad
+            *Realización de Solicitudes
+        *Proveedores
+            *Gestión de Proveedores
+
+        *Producción
+            *Levantamiento
+            *Ensamblaje
+            *Aseguramiento
+        *Productos Listos
+            *Proceso de Entrega
+                *Alerta al Cliente
+        *Control de Mermas (Restantes)
+
+
+
+
+@endmindmap
