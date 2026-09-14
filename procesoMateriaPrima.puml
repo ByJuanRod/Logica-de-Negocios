@@ -2,36 +2,36 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:ClickServlet.handleRequest();
-:new page;
-if (Page.onSecurityCheck) then (true)
-  :Page.onInit();
-  if (isForward?) then (no)
-    :Process controls;
-    if (continue processing?) then (no)
-      stop
-    endif
 
-    if (isPost?) then (yes)
-      :Page.onPost();
-    else (no)
-      :Page.onGet();
-    endif
-    :Page.onRender();
-  endif
-else (false)
-endif
+:Se recibe un trabajo que requiere fabricación;
+:Se determina la materia prima necesaria;
+:Se verifica la materia prima disponible en el taller;
 
-if (do redirect?) then (yes)
-  :redirect process;
-else
-  if (do forward?) then (yes)
-    :Forward request;
-  else (no)
-    :Render page template;
-  endif
+if (¿Hay suficiente materia prima?) then (Sí)
+
+  :Se utiliza la materia prima disponible;
+  :Continúa el proceso de producción;
+
+else (No)
+
+  :Se identifica la materia prima faltante;
+
+  repeat
+    :Se identifica un proveedor correspondiente;
+    :Se contacta al proveedor o vendedor asignado;
+    :Se consulta disponibilidad y precio del material;
+  repeat while (¿El material está disponible?) is (No)
+
+  :Se realiza el pedido o compra del material;
+  :Se recibe o se retira la materia prima;
+  :Se verifica el material recibido;
+  :Se lleva la materia prima al taller;
+  :Continúa el proceso de producción;
+
 endif
 
 stop
+
+@enduml
 
 @enduml

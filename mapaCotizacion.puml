@@ -1,30 +1,48 @@
 @startmindmap
 'https://plantuml.com/mindmap-diagram
 
-caption figure 1
-title My super title
+@startmindmap
 
-* <&flag>Debian
-** <&globe>Ubuntu
-*** Linux Mint
-*** Kubuntu
-*** Lubuntu
-*** KDE Neon
-** <&graph>LMDE
-** <&pulse>SolydXK
-** <&people>SteamOS
-** <&star>Raspbian with a very long name
-*** <s>Raspmbc</s> => OSMC
-*** <s>Raspyfi</s> => Volumio
+* Cotización
 
-header
-My super header
-endheader
+** Datos del cliente
+*** Nombre
+*** Información de contacto
 
-center footer My super footer
+** Producto o trabajo solicitado
+*** Producto prefabricado
+*** Producto personalizado
+*** Cantidad
 
-legend right
-  Short
-  legend
-endlegend
+** Especificaciones del trabajo
+*** Medidas
+*** Diseño solicitado
+*** Características requeridas
+*** Requerimientos particulares del cliente
+
+** Materiales
+*** Tipo de material
+*** Cantidad necesaria
+*** Calibre del acero
+*** Accesorios o piezas requeridas
+
+** Precio
+*** Precio del producto o trabajo
+*** Costo considerado de los materiales
+*** Mano de obra
+*** Descuento si aplica
+*** Precio final
+
+** Condiciones de pago
+*** 50% de anticipo
+*** 50% contra entrega
+
+** Tiempo de entrega
+*** Tiempo estimado de fabricación
+*** Fecha acordada con el cliente
+
+** Entrega
+*** Retiro por el cliente
+*** Transporte si aplica
+
 @endmindmap
