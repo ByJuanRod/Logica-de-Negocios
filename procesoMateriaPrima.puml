@@ -10,7 +10,6 @@ start
 if (¿Hay suficiente materia prima?) then (Sí)
 
   :Se utiliza la materia prima disponible;
-  :Continúa el proceso de producción;
 
 else (No)
 
@@ -26,10 +25,11 @@ else (No)
   :Se recibe o se retira la materia prima;
   :Se verifica el material recibido;
   :Se lleva la materia prima al taller;
-  :Continúa el proceso de producción;
+
 
 endif
 
+  :Continúa el proceso de producción;
 stop
 
 @enduml
